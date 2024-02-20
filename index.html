@@ -49,10 +49,10 @@
         </nav>
 
         <div>
-            <div class="hero min-h-96 md:min-h-screen bg-gradient-to-r from-[#484e5e7f] to-[#979ca9] rounded-3xl "
+            <div class="hero min-h-96 md:min-h-full lg:min-h-full bg-gradient-to-r from-[#484e5e7f] to-[#979ca9] rounded-3xl md:p-16"
                 style="background-image: url(./images/banner.png); background-size: cover; background-position: center;">
                 <div class="hero-content text-center text-neutral-content">
-                    <div class="max-w-2xl">
+                    <div class=" max-w-max md:max-w-lg lg:max-w-2xl">
                         <h1
                             class="md:leading-snug leading-tight text-3xl md:text-6xl text-white  font-extrabold font-raleway">
                             End-to-End Travel with<br><span class="text-[#1DD100] ">P Paribahan</span></h1>
@@ -62,17 +62,17 @@
                             Booking,
                             Secure Transactions, and Flexible Options. Your Next Adventure Awaits – Start Planning Now!
                         </p>
-                        <button
+                        <button onclick="scrollFunction()"
                             class="btn bg-[#1DD100] border-none text-black text-sm md:text-xl font-bold font-raleway">Buy
                             Tickets</button>
                     </div>
                 </div>
             </div>
 
-            <div class=" my-3  md:w-4/5 mx-auto flex flex-col md:flex-row gap-5 md:relative md:-top-10">
+            <div class=" my-3  md:w-4/5 mx-auto flex flex-col md:flex-row gap-5 md:relative md:-top-5 lg:-top-14">
                 <div class="stat bg-white  border-b-2 border-[#1DD100] rounded-3xl flex justify-center items-center">
                     <div class="">
-                        <img  src="./images/people.png" alt="">
+                        <img src="./images/people.png" alt="">
                     </div>
                     <div>
                         <div class="stat-value text-lg md:text-2xl font-bold font-inter">500K+</div>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="stat bg-white border-b-2 border-[#1DD100] rounded-3xl flex justify-center items-center">
                     <div class="">
-                        <img  src="./images/ticket-cupon.png" alt="">
+                        <img src="./images/ticket-cupon.png" alt="">
                     </div>
                     <div>
                         <div class="stat-value text-lg md:text-2xl font-bold font-inter">1.7 lacks</div>
@@ -90,7 +90,7 @@
                 </div>
                 <div class="stat bg-white border-b-2 border-[#1DD100] rounded-3xl flex justify-center items-center">
                     <div class="">
-                        <img  src="./images/stoppage.png" alt="">
+                        <img src="./images/stoppage.png" alt="">
                     </div>
                     <div>
                         <div class="stat-value text-lg md:text-2xl font-bold font-inter">80K+</div>
@@ -100,13 +100,56 @@
             </div>
         </div>
     </header>
-    <main>
 
+    <main>
+        <div id="offer-section" class=" mb-10 md:mb-20">
+            <h1 class="text-3xl md:text-4xl font-bold font-raleway text-center mt-10 md:mt-0">Best offers for you</h1>
+
+            <div class="flex flex-col md:flex-row gap-6 font-inter my-6 md:my-10">
+                <div class="flex justify-between md:w-1/2 rounded-3xl "
+                    style="background-image: url(./images/yellow-rect.svg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                    <div class="p-4 md:p-6 lg:p-10 flex flex-col justify-center space-y-1">
+                        <h1 class="text-2xl md:text-3xl font-black text-[#030712]">15% OFF</h1>
+                        <p class="text-base md:text-ll font-semibold text-[#030712CC]">on your next purchase</p>
+                        <p class="text-sm md:text-base font-normal text-[#0307127F]">use by January 2024</p>
+                    </div>
+                    <div class="">
+                        <img class="h-full" src="./images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="p-4 md:p-6 lg:p-10 flex flex-col justify-center space-y-1">
+                        <h1 class="text-xl md:text-2xl font-bold font-raleway text-[#030712]">NEW15</h1>
+                        <p class="text-base md:text-lg font-medium font-raleway text-[#0307127F]">Coupon Code
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-between md:w-1/2 rounded-3xl"
+                    style="background-image: url(./images/pink-rect.svg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                    <div class="p-4 md:p-6 lg:p-10 flex flex-col justify-center space-y-1">
+                        <h1 class="text-2xl md:text-3xl font-black text-[#030712]">20% OFF</h1>
+                        <p class="text-base md:text-ll font-semibold text-[#030712CC]">on your next purchase</p>
+                        <p class="text-sm md:text-base font-normal text-[#0307127F]">use by January 2024</p>
+                    </div>
+                    <div class="">
+                        <img class="h-full" src="./images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="p-4 md:p-6 lg:p-10 flex flex-col justify-center space-y-1">
+                        <h1 class="text-xl md:text-2xl font-bold font-raleway text-[#030712]">Couple20</h1>
+                        <p class="text-base md:text-lg font-medium font-raleway text-[#0307127F]">Coupon Code
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center w-full">
+                <button class="btn text-[#1DD100] border-[#1DD100] font-raleway font-bold ">See All Offers</button>
+            </div>
+
+        </div>
     </main>
     <footer>
 
     </footer>
-
+    <script src="./scripts/utility.js"></script>
 
 </body>
 
