@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/style.css">
+
 </head>
 
 <body class="">
@@ -161,29 +162,37 @@
                         travel needs, all at your fingertips.
                     </p>
                 </div>
-                <div class="bg-white flex flex-col md:flex-row items-center rounded-3xl">
+
+                <!-- route details -->
+                <div class="bg-white my-5 flex flex-col md:flex-row items-center rounded-3xl">
                     <!-- route description -->
-                    <div class="flex-1 p-6">
+                    <div class="w-full md:w-auto flex-1 p-6">
 
                         <!-- logo and seat -->
                         <div class="flex flex-col md:flex-row md:justify-between items-center mb-6">
                             <div class="flex items-center gap-1 mb-3 md:mb-0">
-                                <img class="w-[50px] h-[40px]" src="./images/bus-logo.png" alt="">
+                                <img class="w-[50px] h-[40px] lg:w-[60px] lg:h-[50px]" src="./images/bus-logo.png"
+                                    alt="">
                                 <div>
-                                    <h4 class="text-lg md:text-3xl font-bold font-raleway">PHero Paribahan</h4>
-                                    <p class=" font-inter text-[#03071299]">Coach-009-WEB ! AC_Business</p>
+                                    <h4 class="text-xl md:text-2xl lg:text-3xl font-bold font-raleway">PHero Paribahan
+                                    </h4>
+                                    <p class=" text-xs md:text-sm  lg:text-base font-inter text-[#03071299]">
+                                        Coach-009-WEB ! AC_Business</p>
                                 </div>
                             </div>
-                            <button class="btn text-[#1DD100] bg-[#1DD10026] border-2 border-[#1DD10066]"><span
+                            <button
+                                class="btn text-[#1DD100] bg-[#1DD10026] border-2 border-[#1DD10066] w-full md:w-auto"><span
                                     id="seat-left">40</span> Seats left
                                 <img src="./images/seat-green.png" alt=""></button>
                         </div>
 
-                        <div class="bg-[#F7F8F8] rounded-3xl p-6 space-y-3">
+                        <div class="w-full md:w-auto bg-[#F7F8F8] rounded-3xl p-6 space-y-3">
                             <p class="flex justify-between border-dotted border-b-2 border-[#03071233] pb-3">
-                                <span>Route</span><span>Dhaka-Sylhet</span></p>
+                                <span>Route</span><span>Dhaka-Sylhet</span>
+                            </p>
                             <p class="flex justify-between border-dotted border-b-2 border-[#03071233] pb-3">
-                                <span>Departure Time</span><span>9:00 PM</span></p>
+                                <span>Departure Time</span><span>9:00 PM</span>
+                            </p>
                             <p class="flex flex-col lg:flex-row justify-between  gap-2 space-y-4 lg:space-y-0">
                                 <Button class="btn">Boarding Point - Laxmipur</Button>
                                 <Button class="btn">Dropping Point - Bogura</Button>
@@ -192,15 +201,41 @@
                         </div>
                     </div>
                     <div>
-                        <img class="hidden md:block" src="./images/info-devider.png" alt="">
+                        <img class="hidden md:block " src="./images/info-devider.png" alt="">
                     </div>
-                    <div class="w-full md:w-1/5 flex flex-row md:flex-col justify-center items-center gap-4 md:space-y-1 mb-4 md:mb-0">
+                    <div
+                        class="w-full md:w-1/5 flex flex-row md:flex-col justify-center items-center gap-4 md:space-y-1 mb-4 md:mb-0">
                         <img class="w-[40px]" src="./images/fare.png" alt="">
                         <h1 class="text-xl md:text-2xl font-bold font-raleway text-[#030712]">550 Taka</h1>
                         <p class="text-base md:text-lg font-medium font-raleway text-[#0307127F]">Per Seat</p>
                     </div>
                 </div>
-                <div>
+
+                <!-- seat section -->
+                <div class="p-8 bg-white flex flex-col lg:flex-row ">
+                    <!-- seat organization -->
+                    <div class="w-7/12">
+                        <div>
+                            <h4 class="font-raleway font-semibold text-xl">Select Your Seat</h4>
+
+                            <div class="flex justify-between my-6 border-dotted border-y-2 border-[#03071233] py-3">
+                                <p class="flex gap-1"><img src="./images/seat-gray.png" alt=""><span
+                                        class=" font-inter font-medium text-[#0307127F]">Available</span></p>
+                                <p class="flex gap-1"><img src="./images/seat-green-filled.png" alt=""><span
+                                        class="font-inter font-medium text-[#1DD100]">Selected</span></p>
+                            </div>
+
+                            <div class="w-full text-right mb-4">
+                                <button class="btn"><img class="bg-none" src="./images/steering-wheel.svg"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- slected seat & personal details -->
+                    <div class="w-4/12">
+
+                    </div>
 
                 </div>
             </div>
