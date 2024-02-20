@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body class="mx-5 lg:w-[90%] lg:mx-auto">
-    <header class="">
+<body class="">
+    <header class="mx-5 lg:w-[90%] lg:mx-auto">
+        <!-- Navbar -->
         <nav class="my-3">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -48,6 +49,7 @@
             </div>
         </nav>
 
+        <!-- Banner -->
         <div>
             <div class="hero min-h-96 md:min-h-full lg:min-h-full bg-gradient-to-r from-[#484e5e7f] to-[#979ca9] rounded-3xl md:p-16"
                 style="background-image: url(./images/banner.png); background-size: cover; background-position: center;">
@@ -102,7 +104,8 @@
     </header>
 
     <main>
-        <div id="offer-section" class=" mb-10 md:mb-20">
+        <!-- Offers -->
+        <div id="offer-section" class=" mb-10 md:mb-20 mx-5 lg:w-[90%] lg:mx-auto">
             <h1 class="text-3xl md:text-4xl font-bold font-raleway text-center mt-10 md:mt-0">Best offers for you</h1>
 
             <div class="flex flex-col md:flex-row gap-6 font-inter my-6 md:my-10">
@@ -145,6 +148,64 @@
             </div>
 
         </div>
+
+        <!-- Ticket -->
+
+        <div id="tickets-section" class="bg-[#F7F8F8] rounded-3xl border-t-2 border-[#1DD100] py-14 md:py-20 lg:py-28">
+            <!-- titles section -->
+            <div class="mx-5 lg:w-[90%] lg:mx-auto">
+                <div class="text-center">
+                    <h2 class="font-raleway font-bold text-3xl md:text-4xl">P.H Paribahan</h2>
+                    <p class="font-inter text-sm md:text-lg text-[#03071299] md:w-3/5 mx-auto mt-6 mb-10">
+                        Enjoy hassle-free reservations, secure transactions, and flexible options tailored to your
+                        travel needs, all at your fingertips.
+                    </p>
+                </div>
+                <div class="bg-white flex flex-col md:flex-row items-center rounded-3xl">
+                    <!-- route description -->
+                    <div class="flex-1 p-6">
+
+                        <!-- logo and seat -->
+                        <div class="flex flex-col md:flex-row md:justify-between items-center mb-6">
+                            <div class="flex items-center gap-1 mb-3 md:mb-0">
+                                <img class="w-[50px] h-[40px]" src="./images/bus-logo.png" alt="">
+                                <div>
+                                    <h4 class="text-lg md:text-3xl font-bold font-raleway">PHero Paribahan</h4>
+                                    <p class=" font-inter text-[#03071299]">Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <button class="btn text-[#1DD100] bg-[#1DD10026] border-2 border-[#1DD10066]"><span
+                                    id="seat-left">40</span> Seats left
+                                <img src="./images/seat-green.png" alt=""></button>
+                        </div>
+
+                        <div class="bg-[#F7F8F8] rounded-3xl p-6 space-y-3">
+                            <p class="flex justify-between border-dotted border-b-2 border-[#03071233] pb-3">
+                                <span>Route</span><span>Dhaka-Sylhet</span></p>
+                            <p class="flex justify-between border-dotted border-b-2 border-[#03071233] pb-3">
+                                <span>Departure Time</span><span>9:00 PM</span></p>
+                            <p class="flex flex-col lg:flex-row justify-between  gap-2 space-y-4 lg:space-y-0">
+                                <Button class="btn">Boarding Point - Laxmipur</Button>
+                                <Button class="btn">Dropping Point - Bogura</Button>
+                                <Button class="btn">Est.Time - 11 Hour</Button>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="hidden md:block" src="./images/info-devider.png" alt="">
+                    </div>
+                    <div class="w-full md:w-1/5 flex flex-row md:flex-col justify-center items-center gap-4 md:space-y-1 mb-4 md:mb-0">
+                        <img class="w-[40px]" src="./images/fare.png" alt="">
+                        <h1 class="text-xl md:text-2xl font-bold font-raleway text-[#030712]">550 Taka</h1>
+                        <p class="text-base md:text-lg font-medium font-raleway text-[#0307127F]">Per Seat</p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+
     </main>
     <footer>
 
