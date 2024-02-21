@@ -18,7 +18,7 @@ for (const seat of seats) {
                 setTextById('seats-count', count);
                 addSelectedSeatToContainer(`${selected.innerText}`)
                 setTotalPrice(count);
-                setGrandTotalPrice(count);
+                enableOrDisableApplyButton(count);
             }
             else {
                 count--;
@@ -28,6 +28,7 @@ for (const seat of seats) {
 
                 romoveUnselectedSeatFromContianer(`${selected.innerText}`);
                 setTotalPrice(count);
+                enableOrDisableApplyButton(count);
             }
         }
         else {
@@ -59,11 +60,45 @@ function romoveUnselectedSeatFromContianer(className) {
 
 function setTotalPrice(count) {
     let price = count * 550;
-    setTextById('total-price', price)
+    setTextById('total-price', price);
+    setTextById('grand-total-price', price);
 }
 
-function setGrandTotalPrice(count) {
-    if (count == 4) {
-        let price = count * 550;
+function enableOrDisableApplyButton(count) {
+    const applyBtn = getElementById('coupon-btn');
+    if (count === 4) {
+        applyBtn.classList.remove("btn-disabled");
     }
+    else {
+        applyBtn.classList.add("btn-disabled");
+        setTotalPrice(count);
+        setTextById('discount-amount', 0)
+    }
+}
+
+function applyDiscount() {
+    let price = 550 * 4;
+    let discount = 0;
+
+    const couponField = getElementById('coupon-field');
+    const couponText = couponField.value;
+    if (couponText === 'NEW15') {
+        discount = (price * 15) / 100;
+        let grandTotal = price - discount;
+        setGrandTotalAndDiscount(discount, grandTotal);
+    }
+    else if (couponText === 'Couple20') {
+        discount = (price * 20) / 100;
+        let grandTotal = price - discount;
+        setGrandTotalAndDiscount(discount, grandTotal);
+    }
+    else {
+        alert('Please enter a valid coupon');
+    }
+}
+
+function setGrandTotalAndDiscount(discount, grandTotal) {
+
+    setTextById('discount-amount', discount)
+    setTextById('grand-total-price', grandTotal);
 }
