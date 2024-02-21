@@ -19,6 +19,7 @@ for (const seat of seats) {
                 addSelectedSeatToContainer(`${selected.innerText}`)
                 setTotalPrice(count);
                 enableOrDisableApplyButton(count);
+                enableOrDisableNextButton();
             }
             else {
                 count--;
@@ -29,6 +30,7 @@ for (const seat of seats) {
                 romoveUnselectedSeatFromContianer(`${selected.innerText}`);
                 setTotalPrice(count);
                 enableOrDisableApplyButton(count);
+                enableOrDisableNextButton();
             }
         }
         else {
@@ -101,4 +103,17 @@ function setGrandTotalAndDiscount(discount, grandTotal) {
 
     setTextById('discount-amount', discount)
     setTextById('grand-total-price', grandTotal);
+}
+
+function enableOrDisableNextButton() {
+    const nextBtn = getElementById('next-btn');
+    const phoneField = getElementById('phone');
+    const phoneValue = phoneField.value;
+    console.log(phoneValue);
+    if (count > 0 && phoneValue !== "") {
+        nextBtn.classList.remove('btn-disabled');
+    }
+    else {
+        nextBtn.classList.add('btn-disabled')
+    }
 }
