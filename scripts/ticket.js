@@ -64,6 +64,8 @@ function setTotalPrice(count) {
     let price = count * 550;
     setTextById('total-price', price);
     setTextById('grand-total-price', price);
+    const couponContainer = document.getElementById('coupon-container');
+    couponContainer.classList.remove('hidden');
 }
 
 function enableOrDisableApplyButton(count) {
@@ -88,14 +90,21 @@ function applyDiscount() {
         discount = (price * 15) / 100;
         let grandTotal = price - discount;
         setGrandTotalAndDiscount(discount, grandTotal);
+        const couponContainer = document.getElementById('coupon-container');
+        couponContainer.classList.add('hidden');
+        couponField.value = '';
     }
     else if (couponText === 'Couple20') {
         discount = (price * 20) / 100;
         let grandTotal = price - discount;
         setGrandTotalAndDiscount(discount, grandTotal);
+        const couponContainer = document.getElementById('coupon-container');
+        couponContainer.classList.add('hidden');
+        couponField.value = '';
     }
     else {
         alert('Please enter a valid coupon');
+        couponField.value = '';
     }
 }
 
@@ -112,7 +121,7 @@ function enableOrDisableNextButton() {
     const phoneField = getElementById('phone');
     const phoneValue = phoneField.value;
     console.log(phoneValue);
-    if (count  && phoneValue !== "") {
+    if (count && phoneValue !== "") {
         nextBtn.classList.remove('btn-disabled');
     }
     else {
