@@ -105,12 +105,14 @@ function setGrandTotalAndDiscount(discount, grandTotal) {
     setTextById('grand-total-price', grandTotal);
 }
 
+document.getElementById('phone').addEventListener('keyup', enableOrDisableNextButton);
+
 function enableOrDisableNextButton() {
     const nextBtn = getElementById('next-btn');
     const phoneField = getElementById('phone');
     const phoneValue = phoneField.value;
     console.log(phoneValue);
-    if (count > 0 && phoneValue !== "") {
+    if (count  && phoneValue !== "") {
         nextBtn.classList.remove('btn-disabled');
     }
     else {

@@ -366,7 +366,7 @@
                             <div id="selected-seat"
                                 class="border-b-2 border-t-2 border-dotted border-[#0307124D] py-2 my-2 text-[#03071299]">
 
-                                <!-- Content will be added -->
+                                <!-- Content will be added dinamicallly -->
 
                             </div>
                             <div class="flex justify-between font-medium">
@@ -412,35 +412,26 @@
                             <button id="next-btn"
                                 class="btn btn-disabled bg-[#1DD100] w-full md:w-1/2 lg:w-full text-white font-raleway font-extrabold"
                                 onclick="my_modal_5.showModal()">Next</button>
+                            
 
-
-                            <!-- <dialog id="my_modal_4" class="modal">
-                                <div class="modal-box w-11/12 max-w-5xl">
-                                    <h3 class="font-bold text-lg">Hello!</h3>
-                                    <p class="py-4">Click the button below to close</p>
-                                    <div class="modal-action">
-                                        <form method="dialog">
-                                            
-                                            <button class="btn">Close</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </dialog> -->
-
-                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                                <div class="modal-box w-11/12 max-w-5xl font-roboto flex flex-col justify-center items-center">
+                            <dialog id="my_modal_5" class="modal modal-center sm:modal-middle">
+                                <div
+                                    class="modal-box bg-[#FFFFFF] py-6 md:py-10 md:px-20 md:h-[90%] h-full font-roboto flex flex-col justify-center items-center space-y-4 md:space-y-7s">
                                     <img src="./images/success.png" alt="">
                                     <h3 class="font-bold text-2xl font-roboto text-[#27AE60]">SUCCESS</h3>
-                                    <p class="text-center font-medium text-xl text-[#4A4A4A]">Thank you for Booking Our
-                                        Bus Seats.
-                                        We are working hard to find the best service and deals for you.</p>
-                                    <p class="text-center font-light text-xl text-[#4A4A4A]">Shortly you will find a
-                                        confirmation
-                                        in your email.</p>
+                                    <div class="">
+                                        <p class="text-center font-medium text-xl text-[#4A4A4A]">Thank you for Booking
+                                            Our
+                                            Bus Seats.
+                                            We are working hard to find the best service and deals for you.</p>
+                                        <p class="text-center font-light text-xl text-[#4A4A4A]">Shortly you will find a
+                                            confirmation
+                                            in your email.</p>
+                                    </div>
                                     <div class="modal-action">
-                                        <form method="dialog">
+                                        <form method="dialog w-1/2">
                                             <!-- if there is a button in form, it will close the modal -->
-                                            <button class="btn">Continue</button>
+                                            <button class="btn w-full rounded-3xl bg-[#27AE60] font-semibold text-lg text-white px-20">Continue</button>
                                         </form>
                                     </div>
                                 </div>
@@ -456,8 +447,6 @@
                         </div>
 
                     </div>
-
-
 
                 </div>
 
